@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: oncall-prober-config
+data:
+  MySqlSettings__user: "root"
+  MySqlSettings__password: "1234"
+  MySqlSettings__host: "oncall-mysql"
+  MySqlSettings__port: "3306"
+  MySqlSettings__database: "oncall"
+  MySqlSettings__charset: "utf8"
+  ExporterSettings__ApiUrl: "http://oncall.local"
+  ExporterSettings__ScrapeInterval: "30"
+  ExporterSettings__MetricsPort: "8000"
+  ExporterSettings__AppSettings__Name: "oncall_prober"
+  ExporterSettings__AppSettings__Key: "somesupersecretkey"

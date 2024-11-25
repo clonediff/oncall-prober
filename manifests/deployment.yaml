@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oncall-prober
+  labels:
+    app.kubernetes.io/name: oncall-prober
+    app.kubernetes.io/component: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: oncall-prober
+      app.kubernetes.io/component: web
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: oncall-prober
+        app.kubernetes.io/component: web
+    spec:
+      containers:
+      - name: oncall-prober
+        image: clonediff/oncall-prober:latest
+        envFrom:
+        - configMapRef:
+            name: oncall-prober-config
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8000
