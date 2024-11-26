@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Prober.Entities;
 
-namespace Prober.Data;
+namespace Prober.Data.AppDb;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {

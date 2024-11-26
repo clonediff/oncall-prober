@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Prober.Entities;
 
-namespace Prober.Data;
+namespace Prober.Data.AppDb;
 
 public class ApplicationEntityConfiguration : IEntityTypeConfiguration<Application>
 {
