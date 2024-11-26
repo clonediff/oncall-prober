@@ -15,5 +15,5 @@ data:
   ExporterSettings__MetricsPort: "8000"
   ExporterSettings__AppSettings__Name: "oncall_prober"
   ExporterSettings__AppSettings__Key: "somesupersecretkey"
-  PrometheusSettings__ApiUrl: "localhost:9090"
+  PrometheusSettings__ApiUrl: "http://host.minikube.internal:9090"
   PrometheusSettings__ScrapeInterval: "60"
